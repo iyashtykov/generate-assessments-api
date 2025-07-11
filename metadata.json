@@ -1,0 +1,8 @@
+{
+  "name": "Generate assessments API",
+  "type": "helper",
+  "properties": {
+    "user_type": "instructor",
+    "component": "assignment-author"
+  }
+}
