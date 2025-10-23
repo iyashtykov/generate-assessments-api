@@ -35,6 +35,28 @@ const createButton = (title, onClick) => {
   return button
 }
 
+const makeDraggable = (el) => {
+  let offsetX = 0, offsetY = 0, isDown = false
+
+  el.addEventListener('mousedown', (e) => {
+    isDown = true
+    offsetX = e.clientX - el.offsetLeft
+    offsetY = e.clientY - el.offsetTop
+    el.style.cursor = 'grabbing'
+  })
+
+  document.addEventListener('mouseup', () => {
+    isDown = false
+    el.style.cursor = 'grab'
+  })
+
+  document.addEventListener('mousemove', (e) => {
+    if (!isDown) return
+    el.style.left = (e.clientX - offsetX) + 'px'
+    el.style.top = (e.clientY - offsetY) + 'px'
+  })
+}
+
 const init = () => {
     const modal = document.createElement('div')
     modal.id = 'generateAssessmentsModalId'
@@ -50,8 +72,8 @@ const init = () => {
             generate(types[i])
         }        
     }))
-
-    document.querySelector('body').append(modal)
+  	makeDraggable(modal)
+  	document.body.append(modal)
 }
 
 setTimeout(init, 100)
