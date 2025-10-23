@@ -37,7 +37,7 @@ const createButton = (title, onClick) => {
 
 const init = () => {
     const modal = document.createElement('div')
-    modal.id = 'customModalId'
+    modal.id = 'generateAssessmentsModalId'
     modal.style = style
     const types = ["free-text", "parsons-puzzle", "multiple-choice", "fill-in-the-blanks", "code-output-compare"];
     modal.append(createButton('Free text', async () => generate(types[0])))
