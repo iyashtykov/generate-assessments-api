@@ -22,7 +22,7 @@ const style = `
     height: 110px;
     z-index: 10000;
     position: absolute;
-    left: 30px;
+    left: 230px;
     top: 500px;
     background-color: white;
     padding: 10px;
