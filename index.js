@@ -22,7 +22,7 @@ const assessmentsStyle = `
     height: 110px;
     z-index: 10000;
     position: absolute;
-    left: 180px;
+    left: 200px;
     top: 600px;
     background-color: white;
     padding: 10px;
