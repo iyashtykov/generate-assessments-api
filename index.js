@@ -17,7 +17,7 @@ const generate = async (assessmentType) => {
     }
 }
 
-const style = `
+const assessmentsStyle = `
     width: 140px;
     height: 110px;
     z-index: 10000;
@@ -60,7 +60,7 @@ const makeDraggable = (el) => {
 const init = () => {
     const modal = document.createElement('div')
     modal.id = 'generateAssessmentsModalId'
-    modal.style = style
+    modal.style = assessmentsStyle
     const types = ["free-text", "parsons-puzzle", "multiple-choice", "fill-in-the-blanks", "code-output-compare"];
     modal.append(createButton('Free text', async () => generate(types[0])))
     modal.append(createButton('Parsons', async () => generate(types[1])))
