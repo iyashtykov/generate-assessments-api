@@ -57,7 +57,7 @@ const makeDraggable = (el) => {
   })
 }
 
-const init = () => {
+const initAssessments = () => {
     const modal = document.createElement('div')
     modal.id = 'generateAssessmentsModalId'
     modal.style = assessmentsStyle
@@ -76,4 +76,4 @@ const init = () => {
   	document.body.append(modal)
 }
 
-setTimeout(init, 100)
+setTimeout(initAssessments, 100)
